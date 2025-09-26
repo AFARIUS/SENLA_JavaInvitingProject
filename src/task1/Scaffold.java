@@ -129,6 +129,6 @@ public class Scaffold {
     }
 
     public static void main(String[] args) {
-        new Scaffold().play();
+        new Scaffold().play(); //Запуск
     }
 }
