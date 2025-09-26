@@ -17,7 +17,7 @@ public class exchangeRate {
     private String inputValue;
     private String outputValue;
     private final Scanner scanner;
-    public final DecimalFormat round;
+    private final DecimalFormat round;
 
     public exchangeRate() {
         this.scanner = new Scanner(System.in);
