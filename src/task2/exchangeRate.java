@@ -64,7 +64,7 @@ public class exchangeRate {
 
     public void valueRate() {
         System.out.print("Введите количество " + inputValue + ": ");
-        Double input = Double.valueOf(scanner.nextLine());
+        double input = Double.parseDouble(scanner.nextLine());
 
         System.out.print("Это равно " + round.format(input * (coefficients.get(inputValue) / coefficients.get(outputValue))) + " " + outputValue);
     }
