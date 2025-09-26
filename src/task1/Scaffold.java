@@ -28,8 +28,8 @@ public class Scaffold {
         System.out.println("Игра началась! У вас " + lives + " жизней.");
 
         while (!isGameOver()) {
-            printCurrentWord(); // Показываем текущий прогресс
-            inputProcessing();      // Обрабатываем ввод пользователя
+            printCurrentWord();
+            inputProcessing();
         }
 
         printFinalResult();
@@ -129,6 +129,6 @@ public class Scaffold {
     }
 
     public static void main(String[] args) {
-        new Scaffold().play(); //Запуск
+        new Scaffold().play();
     }
 }
