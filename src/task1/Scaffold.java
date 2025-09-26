@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Scaffold {
-    private static final String[] words = {"Джава", "Собака", "Мыло", "Тетраэдр"};
+    private static final String[] words = {"Джава", "Собака", "Мыло", "Тетраэдр", "Сверхновая", "Рекорд"};
     private String choosedWord;
     private int lives;
     private final Set<Character> guessedLetters;
@@ -20,7 +20,7 @@ public class Scaffold {
     public Scaffold() {
         this.guessedLetters = new HashSet<>();
         this.choosedWord = getRandomWord();
-        this.lives = 13;
+        this.lives = 7;
         this.scanner = new Scanner(System.in);
     }
 
@@ -67,11 +67,11 @@ public class Scaffold {
     }
 
     private void inputProcessing() {
-        System.out.print("Введите букву или слово длиной в" + choosedWord.length() + "символов: ");
+        System.out.print("Введите букву или слово длиной в " + choosedWord.length() + " символов: ");
         String input = scanner.nextLine().toLowerCase();
 
         if (!(checkInAlphabet(input) && (input.length() == 1 || input.length() == choosedWord.length()))) {
-            System.out.println("Ввод некорректен. Введите заново");
+            System.out.println("Ввод некорректен. Введите заново.");
             return;
         }
 
@@ -79,12 +79,12 @@ public class Scaffold {
             if (input.equals(choosedWord)) {
                 for(char symbol : input.toCharArray()) {
                     guessedLetters.add(symbol);
-                    return;
-                }
+                    }
+                return;
             }
             else {
                 lives--;
-                System.out.println("Это неверное слово");
+                System.out.println("Это неверное слово.");
                 return;
             }
         }
